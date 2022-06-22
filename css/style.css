@@ -104,38 +104,57 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 163px;
+
 	display: block;
+
 	transform: translateY(-50%);
+	font-size: 0;
 }
 
 .header-left > ul > li {
 	position: relative;
-	display: block;
-	float: left;
+	display: inline-block;
 	margin-right: 14px;
-	padding: 0 5px;
 }
 
-.header-left > ul > li:hover .header-submenu>li{
-	display: block;
-}
 
-.header-left > ul > li>a {
+
+.header-left > ul > li >a {
 	position: relative;
 	display: block;
-	color: #fff;
+	height: 96px;
+	line-height: 96px;
+	text-align: center;
 	font-size: 18px;
-	line-height: 18px;
+	padding: 0 5px;
+	color: #fff;
 }
 
 .header-submenu{
 	position: absolute;
-	left: 0;
-	top: 20px;
+	left: 50%;
+	top: 60px;
+	transform: translateX(-50%) translateY(10px);
 	display: block;
-	z-index: 99999;
+	visibility: hidden;
+	min-width: 100px;
+	opacity: 0;
+	transition: all 0.3s;
 
+	background: #fff;
+	border: 1px solid rgba(255, 255, 255, .3);
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px rgb(0 0 0 / 8%);
 }
+
+.header-left > ul > li:hover .header-submenu{
+	z-index: 999;
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+
 
 .header-submenu>li{
 	position: relative;
@@ -145,9 +164,22 @@ body {
 .header-submenu>li>a{
 	position: relative;
 	display: block;
-	color: blue;
 
+	text-align: center;
+	white-space: nowrap;
+	font-size: 15px;
+	color: #000;
+	font-weight: 400;
+	line-height: 20px;
+
+	padding: 5px 0;
+	border-bottom: 1px solid gray;
+	background-color: #fff;
 }
+.header-submenu>li:last-child a{
+	border-bottom: 0;
+}
+
 
 .header-right {
 	position: absolute;
@@ -250,6 +282,7 @@ body {
 	/* 백그라운드 이미지 가득 채울려면 */
 	height: 560px;
 	font-size: 0;
+	z-index: -1;
 }
 
 /* 피시버전 */
