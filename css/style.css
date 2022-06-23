@@ -59,6 +59,33 @@ body {
 	float: right;
 }
 
+/* 상단배너 */
+/* 팝업부분 */
+.popup{	
+	position: relative;
+	display: block;
+	height: 60px;
+	background-image: radial-gradient(circle at 50% 527%,#ff896a,#e23000 119%);
+}
+
+.popup .inner{	
+	position: relative;
+	display: block;
+}
+.popup .inner img{
+	position: relative;
+	display: block;
+}
+
+@media all and (max-width:1200px){
+	.popup{
+		display: none;
+	}
+}
+
+
+/* //팝업 부분 */
+
 /* 헤더 */
 .header {
 	position: relative;
@@ -663,6 +690,15 @@ body {
 		float: right;
 	}
 }
+
+@media all and (max-width:540px){
+	.items .inner ul li{
+		width: 100%;
+		white-space: nowrap;
+		text-align: center;
+	}
+}
+
 
 /* //아이템 */
 
