@@ -1,4 +1,22 @@
-$(document).ready();
+$(document).ready(function(){
+    // 메인메뉴 기능
+    let popup = $('.popup')
+    let header = $('.header')
+
+
+    $(window).scroll(function(){
+        let temp = $(window).scrollTop();
+        if(temp > 0){
+            popup.addClass('popup-close')
+            header.addClass('header-show')
+        } else {
+            popup.removeClass('popup-close')
+            header.removeClass('header-show')
+        }
+    })
+});
+
+
 
 window.onload = function () {
     new Swiper('.sw-events', {
