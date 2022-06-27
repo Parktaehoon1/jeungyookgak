@@ -64,6 +64,7 @@ body {
 .popup {
 	position: relative;
 	display: block;
+	visibility: visible;
 	height: 60px;
 	background-image: radial-gradient(circle at 50% 527%, #ff896a, #e23000 119%);
 }
@@ -117,11 +118,11 @@ body {
 	transition: all 0.3s;
 }
 
-.mb-wrap-open{
+.mb-wrap-open {
 	right: 0;
 }
 
-.mb-wrap-close{
+.mb-wrap-close {
 	position: absolute;
 	top: 0;
 	right: -500px;
@@ -186,7 +187,7 @@ body {
 	padding: 20px 30px;
 }
 
-.mb-wrap-top-depth1 li:hover{
+.mb-wrap-top-depth1 li:hover {
 	background-color: #e9e9e9;
 	border-radius: 15px;
 }
@@ -238,6 +239,53 @@ body {
 	background-size: cover;
 }
 
+.mbline::before {
+	content: '';
+	width: 100%;
+	height: 1px;
+	display: block;
+	background-color: #9b9b9b;
+}
+
+.mb-wrap-list-menu {
+	position: relative;
+	display: block;
+	padding: 20px 0;
+}
+
+.mb-wrap-list-menu li {
+	position: relative;
+	display: block;
+	padding: 15px 0;
+}
+
+.mb-wrap-list-menu li a {
+	position: relative;
+	display: block;
+	font-size: 20px;
+	font-weight: 800;
+	transition: transform 0.3s;
+}
+
+.mb-wrap-list-menu li:hover a {
+	transform: translateX(2%);
+}
+
+@media all and (max-width:650px){
+	.mb-wrap {
+		position: fixed;
+		/* right: -500px; */
+		top: 0;
+		display: block;
+		width: 74vw;
+		height: 100%;
+		padding: 20px 20px;
+	
+		background-color: #fff;
+		z-index: 99998;
+		transition: all 0.3s;
+	}
+}
 
 /* //메뉴 클릭시(header-right-logor) 나오는 부분 */
 
@@ -655,19 +703,23 @@ body {
 @media all and (max-width:1260px) {
 	.events-left {
 		width: 100%;
-		background-size: cover;
+		background-size: contain;
 		margin: 0 auto;
 		border-right: 0;
+	}
+	.swiper-slide>a{
+		background-size: contain;
 	}
 
 	.events-right {
 		width: 100%;
-		background-size: cover;
+		background-size: contain;
 		margin: 0 auto;
 	}
 
 	.events-right-pic {
 		width: 100%;
+		background-size: contain;
 	}
 
 	.sw-events-control {
@@ -890,7 +942,7 @@ body {
 	position: relative;
 	display: block;
 	/* width: 1184px; */
-	height: 100%;
+	/* height: 100%; */
 
 	margin-top: 33px;
 }
@@ -899,8 +951,8 @@ body {
 	position: relative;
 	display: block;
 	background: url('../images/banner.png') no-repeat center;
-	background-size: cover;
-	width: 100%;
+	background-size: contain;
+	/* width: 100%; */
 	/* height: 200px; */
 	padding: 100px 0;
 }
@@ -909,8 +961,11 @@ body {
 
 /*  */
 @media all and (max-width:1200px) {
+
 	.banner-image {
-		width: 100%;
+		width: 98.6vw;
+		padding: 8.4vw 0;
+
 	}
 }
 
@@ -1014,7 +1069,6 @@ body {
 	width: 24px;
 	height: 24px;
 	float: left;
-
 }
 
 
@@ -1116,5 +1170,81 @@ body {
 
 	margin-left: 10px;
 }
+
+/* pc 버전 */
+/* 반응형 버전 */
+@media all and (max-width:630px) {
+	.footer-inform {
+		position: relative;
+		display: block;
+	}
+
+	.footerlogo {
+		margin: 0 auto;
+	}
+
+	.footer-list {
+		margin: 0;
+	}
+
+	.footer-inform-left-addr {
+		margin: 0;
+	}
+
+	.footer-inform-left>p {
+		margin: 0;
+	}
+
+	.footer-inform .footer-inform-right {
+		position: relative;
+		display: block;
+		text-align: center;
+	}
+
+	.footer-inform-right h6 {
+		position: relative;
+		display: block;
+	}
+
+	.footer-inform-left {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		font-size: 10px;
+		text-align: center;
+	}
+
+	.footer-list>ul>li>a {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: 26px;
+		margin: 0 1vw 0 0;
+		font-size: 11px;
+	}
+
+	.footer-btn-bottom {
+		position: relative;
+		display: block;
+		text-align: center;
+		margin-right: 33.3vw;
+	}
+	.footer-btn>button{
+		width: 114px;
+		white-space: nowrap;
+	}
+}
+
+@media all and (max-width:430px) {
+	.footer-btn-bottom {
+		position: relative;
+		display: block;
+		text-align: center;
+		margin-right: 90px;
+	}
+}
+
 
 /* //푸터 */
