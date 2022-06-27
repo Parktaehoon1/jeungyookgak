@@ -271,7 +271,7 @@ body {
 	transform: translateX(2%);
 }
 
-@media all and (max-width:650px){
+@media all and (max-width:650px) {
 	.mb-wrap {
 		position: fixed;
 		/* right: -500px; */
@@ -280,7 +280,7 @@ body {
 		width: 74vw;
 		height: 100%;
 		padding: 20px 20px;
-	
+
 		background-color: #fff;
 		z-index: 99998;
 		transition: all 0.3s;
@@ -707,7 +707,8 @@ body {
 		margin: 0 auto;
 		border-right: 0;
 	}
-	.swiper-slide>a{
+
+	.swiper-slide>a {
 		background-size: contain;
 	}
 
@@ -1231,7 +1232,8 @@ body {
 		text-align: center;
 		margin-right: 33.3vw;
 	}
-	.footer-btn>button{
+
+	.footer-btn>button {
 		width: 114px;
 		white-space: nowrap;
 	}
