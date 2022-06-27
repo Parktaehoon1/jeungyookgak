@@ -247,19 +247,7 @@ body {
 	background-color: #9b9b9b;
 }
 
-.mb-wrap-list-menu {
-	position: relative;
-	display: block;
-	padding: 20px 0;
-}
-
-.mb-wrap-list-menu li {
-	position: relative;
-	display: block;
-	padding: 15px 0;
-}
-
-.mb-wrap-list-menu li a {
+.mb-wrap-top-depth1 li a {
 	position: relative;
 	display: block;
 	font-size: 20px;
@@ -267,8 +255,26 @@ body {
 	transition: transform 0.3s;
 }
 
-.mb-wrap-list-menu li:hover a {
-	transform: translateX(2%);
+.mb-wrap-top-depth1 li:hover a {
+	transform: translateX(4%);
+}
+
+.mb-wrap-list-depth2{
+	position: relative;
+	display: block;
+}
+
+.mb-wrap-list-depth2 li {
+	position: relative;
+	display: block;
+	padding: 20px 0;
+	line-height: 20px;
+}
+.mb-wrap-list-depth2 li a{
+	position: relative;
+	display: block;
+	font-size: 17px;
+	font-weight: 600;
 }
 
 @media all and (max-width:650px) {
@@ -1035,12 +1041,9 @@ body {
 	margin-right: 10px;
 }
 
-.footer .footer-list .footer-btn>div {
+.footer-btn-app{
 	position: relative;
-	display: inline-block;
-	background-color: #fafafa;
-	border: 1px solid #fafafa;
-	width: 100%;
+	display: block;
 	line-height: 26px;
 }
 
@@ -1159,17 +1162,18 @@ body {
 	margin-bottom: 10px;
 }
 
-.footer-inform-right button {
+.footer-inform-right a {
 	position: relative;
 	display: block;
 	float: right;
 
 	padding: 5px 10px;
+	margin: 0 5px;
 	border: 1px solid #212121;
 	border-radius: 4px;
 	background-color: #fff;
 
-	margin-left: 10px;
+	text-align: center;
 }
 
 /* pc 버전 */
@@ -1226,7 +1230,7 @@ body {
 		font-size: 11px;
 	}
 
-	.footer-btn-bottom {
+	.footer-btn-bottom{
 		position: relative;
 		display: block;
 		text-align: center;
@@ -1240,11 +1244,10 @@ body {
 }
 
 @media all and (max-width:430px) {
-	.footer-btn-bottom {
+	.footer-btn-bottom>a {
 		position: relative;
 		display: block;
 		text-align: center;
-		margin-right: 90px;
 	}
 }
 
