@@ -70,7 +70,8 @@ body {
 }
 
 .popup-close {
-	display: none;
+	/* display: none; */
+	visibility: hidden;
 }
 
 .popup-close-btn {
@@ -811,75 +812,77 @@ body {
 	height: 30px;
 }
 
-.depth1 h3 {
+.items-title{
 	font-size: 18px;
 	margin-top: 16px;
 }
 
-.depth1 p {
+/* .depth1 h3 {
+	font-size: 18px;
+	margin-top: 16px;
+} */
+
+.items-desc{
 	font-size: 16px;
 	color: #9b9b9b;
 }
+
+/* .depth1 p {
+	font-size: 16px;
+	color: #9b9b9b;
+} */
 
 
 .depth1 .items-bt:hover {
 	background: #000 url('../images/hoverbutton.svg') no-repeat center;
 	background-size: cover;
 }
+.items-pic{
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	background-color: transparent
+}
+
+.items-pic img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 70%;
+	height: 70%;
+}
 
 
 .items-pic1 {
 	background: url('../images/items1.png') no-repeat center;
 	background-size: 276px 276px;
-	background-color: #333;
-	width: 100%;
-	height: 100%;
-	background-color: transparent
 }
 
 .items-pic2 {
 	background: url('../images/items2.png') no-repeat center;
 	background-size: 276px 276px;
-	background-color: #333;
-	width: 100%;
-	height: 100%;
-	background-color: transparent
 }
 
 .items-pic3 {
 	background: url('../images/items3.png') no-repeat center;
 	background-size: 276px 276px;
-	background-color: #333;
-	width: 100%;
-	height: 100%;
-	background-color: transparent
 }
 
 .items-pic4 {
 	background: url('../images/items4.png') no-repeat center;
 	background-size: 276px 276px;
-	background-color: #333;
-	width: 100%;
-	height: 100%;
-	background-color: transparent
 }
 
 .items-pic5 {
 	background: url('../images/items5.png') no-repeat center;
 	background-size: 276px 276px;
-	background-color: #333;
-	width: 100%;
-	height: 100%;
-	background-color: transparent
 }
 
 .items-pic6 {
 	background: url('../images/items6.png') no-repeat center;
 	background-size: 276px 276px;
-	background-color: #333;
-	width: 100%;
-	height: 100%;
-	background-color: transparent
 }
 
 /* PC버전  */
