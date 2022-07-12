@@ -1,29 +1,33 @@
 $(document).ready(function () {
+    	// modal 기능
+	let modalWrap = $('.modal-wrap');
+	let modalClose = $('.modal-close')
+
+
+	modalClose.click(function(){
+		modalWrap.stop().fadeOut(500)
+	})
     // 메인메뉴 기능
     let popup = $('.popup')
     let header = $('.header')
+    $('html').animate({
+        scrollTop: 0
+    }, 50);
 
 
     $(window).scroll(function () {
         let temp = $(window).scrollTop();
         if (temp > 0) {
-            popup.addClass('popup-close')
             header.addClass('header-show')
         } else {
-            popup.removeClass('popup-close')
             header.removeClass('header-show')
         }
     })
-    $(document).ready(function () {
-        // 팝업닫기
-        let pop = $('.popup');
-        let pop_close = $('.popup-close-btn');
-        pop_close.click(function (event) {
-            // a 태그의 href 로 이동하는 기능 막기
-            event.preventDefault();
-
-            pop.hide();
-        });
+    // 팝업닫기
+    let popUp = $('.pop-up');
+    let popClose = $('.pop-close');
+    popClose.click(function () {
+        popUp.hide();
     });
 
     let header_right_logo = $('.header-right-logor')
@@ -136,17 +140,18 @@ window.onload = function () {
 
     for (let i = 0; i < itemsDataTotal; i++) {
         let temp = depth1[i];
+        let data = itemsData[i]
 
         let showHtml = `
             <div class="items-img-case">
             <a href="#" class="items-pic">
-                <img src="images/${itemsData[i].pic}" alt="">
+                <img src="images/${data.pic}" alt="">
             </a>
-                <a href="#" class="${itemsData[i].cart}"></a>
+                <a href="#" class="${data.cart}"></a>
             </div>
-            <h3 class="items-title">${itemsData[i].title}</h3>
-            <p class="items-desc">${itemsData[i].desc}</p>
-            <a href="#" class="${itemsData[i].option}"></a>
+            <h3 class="items-title">${data.title}</h3>
+            <p class="items-desc">${data.desc}</p>
+            <a href="#" class="${data.option}"></a>
             `;
 
         temp.innerHTML = showHtml;
