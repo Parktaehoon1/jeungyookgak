@@ -1,12 +1,28 @@
 $(document).ready(function () {
     	// modal 기능
-	let modalWrap = $('.modal-wrap');
-	let modalClose = $('.modal-close')
-
-
-	modalClose.click(function(){
-		modalWrap.stop().fadeOut(500)
-	})
+        let modalWrap = $('.modal-wrap');
+        let modalClose = $('.modal-close');
+        
+      
+        modalClose.click(function(){
+          modalWrap.stop().fadeOut(500)
+          // 추가기능 : 스크롤바 살리기
+          // $('html').css('overflow', 'auto');
+        });
+        let modalMain = $('.modal-main')
+        //내용 배경 클릭
+        modalMain.click(function(event){
+          // 클릭 정보 전달 막기
+          event.stopPropagation();
+        });
+        //전체 배경 클릭
+        modalWrap.click(function(){
+          modalWrap.stop().fadeOut(500);
+          // 추가기능 : 스크롤바 살리기
+          // $('html').css('overflow', 'auto');
+        });
+        
+      
     // 메인메뉴 기능
     let popup = $('.popup')
     let header = $('.header')
@@ -140,6 +156,7 @@ window.onload = function () {
 
     for (let i = 0; i < itemsDataTotal; i++) {
         let temp = depth1[i];
+        console.log(temp)
         let data = itemsData[i]
 
         let showHtml = `

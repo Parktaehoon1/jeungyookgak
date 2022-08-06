@@ -35,6 +35,8 @@ body {
 	line-height: 1.4;
 }
 
+
+
 /* 공통영역 */
 .inner {
 	position: relative;
@@ -58,8 +60,8 @@ body {
 .right {
 	float: right;
 }
-/* 모달 */
-/* 안내창 */
+
+/* 모달창 */
 .modal-wrap {
 	position: fixed;
 	left: 0;
@@ -143,9 +145,10 @@ body {
 	transform: rotate(180deg);
 }
 
+.fas{
+	color: #333;
+}
 
-
-/* 상단배너 */
 /* 팝업부분 */
 .pop-up {
   position: relative;
@@ -845,6 +848,13 @@ body {
 	position: relative;
 	display: block;
 }
+
+.items .inner > h2{
+	font-size: 32px;
+  line-height: 32px;
+	font-weight: 700;
+}
+
 
 .depth1 {
 	position: relative;
